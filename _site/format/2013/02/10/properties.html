@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title>  Properties |  CSS Strategy </title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="/css/layout.css" />
+</head>
+<body>
+<div class="header">
+<div class="header-inner">
+  <h1> CSS Strategy </h1>
+    <ul class="nav-main">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/">Blog</a></li>
+    </ul>
+  </header>
+</div>
+</div>
+  <div class="main">
+    <section class="sidebar">
+<h2>Contents</h2>
+<ul class="nav-sub">
+  
+  <li><a href="/2013/02/26/comments.html">1. Comments</a></li>
+  
+  <li><a href="/2013/02/14/indenting-and-whitespace.html">2. Indenting and Whitespace</a></li>
+  
+  <li><a href="/2013/02/12/format.html">3. Format (Overview)</a></li>
+  
+  <li><a href="/format/2013/02/11/general-format.html">General Format</a></li>
+  
+  <li><a href="/format/2013/02/10/properties.html">Properties</a></li>
+  
+  <li><a href="/format/2013/02/09/performance.html">Performance</a></li>
+  
+  <li><a href="/2013/02/08/preprocessor.html">4. Preprocessor</a></li>
+  
+</ul>
+
+</section>
+
+<section class="content content-2-col">
+
+  <h2 class="page-title">Properties</h2>
+  
+  <ul>
+<li>Include one declaration per line in a declaration block.</li>
+
+<li>For each declaration use one level of indentation, two spaces, not tabs.</li>
+
+<li>Include single space after the colon of a declaration. (This is also good practise when switching to using SASS the space is required.)</li>
+
+<li>Use lowercase and shorthand hex values, e.g., #aaa.</li>
+
+<li>Where allowed, avoid specifying units for zero-values, e.g., margin: 0.</li>
+
+<li>Include a space after each comma in comma-separated property or function values.</li>
+
+<li>End each declaration with a semi-colon.</li>
+
+<li>Place the closing brace of a ruleset in the same column as the first character of the ruleset.</li>
+
+<li>Separate each ruleset by a blank line.</li>
+</ul>
+
+<p>Example code:</p>
+
+<pre><code>#forum .description {
+  color: #efefef;
+  font-size: 0.9em;
+  margin: 0.5em;
+}</code></pre>
+
+<p>Source: <a href='https://github.com/necolas/idiomatic-css'>Principles of writing consistent, idiomatic CSS by Nicolas Gallagher</a></p>
+
+<h4 id='property_order__group_similar_properties'>Property order - Group similar properties</h4>
+
+<ul>
+<li>Declarations should be ordered by structurally important properties (e.g. positioning and box-model) to be declared prior to all others.</li>
+</ul>
+
+<p>The Drupal coding standards, and other people, suggest using alphabetical order, but the drawback is that it separates related properties. For example, position offsets are no longer grouped together and box-model properties can end up spread throughout a declaration block.</p>
+
+<p>Example code:</p>
+
+<pre><code>.book-admin-form {
+    /* Display &amp; Box Model */
+    display: block;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border: 10px solid #333;
+    margin: 0;
+    overflow: hidden;
+    
+    /* Other */
+    font-family: helvetica, arial, sans-serif;
+    color: #333;
+    background: #fff;
+    background: linear-gradient(#fff, rgba(0, 0, 0, 0.8));
+}</code></pre>
+
+<p>Source: <a href='https://github.com/necolas/idiomatic-css'>Principles of writing consistent, idiomatic CSS by Nicolas Gallagher</a></p>
+
+<p>Tip: <a href='http://csscomb.com'>CSS Comb</a> - The Greatest tool for sorting CSS properties in specific order.</p>
+
+<h4 id='exceptions_and_slight_deviations'>Exceptions and slight deviations</h4>
+
+<ul>
+<li>Large blocks of single declarations can use a slightly different, single-line format.</li>
+
+<li>Long, comma-separated property values - such as collections of gradients or shadows - can be arranged across multiple lines in an effort to improve readability and produce more useful diffs.</li>
+</ul>
+
+<p>Large blocks of single declarations can use a slightly different, single-line format. In this case, a space should be included after the opening brace and before the closing brace.</p>
+
+<pre><code>.selector-1 { width: 10%; }
+.selector-2 { width: 20%; }
+.selector-3 { width: 30%; }</code></pre>
+
+<p>Long, comma-separated property values - such as collections of gradients or shadows - can be arranged across multiple lines in an effort to improve readability and produce more useful diffs. There are various formats that could be used; one example is shown below.</p>
+
+<pre><code>.selector {
+    background-image:
+        linear-gradient(#fff, #ccc),
+        linear-gradient(#f3c, #4ec);
+    box-shadow:
+        1px 1px 1px #000,
+        2px 2px 1px 1px #ccc inset;
+}</code></pre>
+
+<p>Source: <a href='https://github.com/necolas/idiomatic-css'>Principles of writing consistent, idiomatic CSS by Nicolas Gallagher</a></p>
+
+</section>
+    <footer>
+      <p>System Seed | All Rights Reserved. </p>
+    </footer>
+  </div>
+</body>
+</html>

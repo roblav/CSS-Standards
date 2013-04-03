@@ -1,0 +1,21 @@
+---
+layout: default
+title: Blog
+---
+<section class="content">
+  <h2>Blog</h2>
+  <p>This style guide is a compilation of suggested standards and ideas from around the internet, and where possible information has been credited.</p>
+
+<p>The purpose of this guide is to provide a common standard by which the System Seed development team will work with CSS. The guide has been produced with a slant toward using Drupal coding standards.</p>
+
+<p>This is a live document and subject to modification.</p>
+
+<h2>Systemseed CSS Style Guide</h2>
+
+<ul class="nav-sub">
+  {% for post in site.posts %}
+  <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
+
+</section>

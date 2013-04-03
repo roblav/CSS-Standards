@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title>  4. Preprocessor |  CSS Strategy </title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="/css/layout.css" />
+</head>
+<body>
+<div class="header">
+<div class="header-inner">
+  <h1> CSS Strategy </h1>
+    <ul class="nav-main">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/">Blog</a></li>
+    </ul>
+  </header>
+</div>
+</div>
+  <div class="main">
+    <section class="sidebar">
+<h2>Contents</h2>
+<ul class="nav-sub">
+  
+  <li><a href="/2013/02/26/comments.html">1. Comments</a></li>
+  
+  <li><a href="/2013/02/14/indenting-and-whitespace.html">2. Indenting and Whitespace</a></li>
+  
+  <li><a href="/2013/02/12/format.html">3. Format (Overview)</a></li>
+  
+  <li><a href="/format/2013/02/11/general-format.html">General Format</a></li>
+  
+  <li><a href="/format/2013/02/10/properties.html">Properties</a></li>
+  
+  <li><a href="/format/2013/02/09/performance.html">Performance</a></li>
+  
+  <li><a href="/2013/02/08/preprocessor.html">4. Preprocessor</a></li>
+  
+</ul>
+
+</section>
+
+<section class="content content-2-col">
+
+  <h2 class="page-title">4. Preprocessor</h2>
+  
+  <h3 id='beware_of_bloated_css'>Beware of bloated CSS</h3>
+
+<p>Utilise a preprocessors features such as mixins, variables, nested rules and functions to make code easier to maintain but always double check compiled stylesheets to avoid code bloat. Preprocessors, when used inefficiently, can cause code bloat.</p>
+
+<p>Source: <a href='https://smacss.com/book/preprocessors'>SMACSS on preprocessors (members only)</a></p>
+
+<h2 id='additional_format_considerations'>Additional format considerations</h2>
+
+<p>Different CSS preprocessors have different features, functionality, and syntax. Your conventions should be extended to accommodate the particularities of any preprocessor in use. The following guidelines are in reference to Sass.</p>
+
+<ul>
+<li>Limit nesting to 1 level deep. Reassess any nesting more than 2 levels deep. This prevents overly specific CSS selectors.</li>
+
+<li>Avoid large numbers of nested rules. Break them up when readability starts to be affected. Preference to avoid nesting that spreads over more than 20 lines.</li>
+
+<li>Always place @extend statements on the first lines of a declaration block.</li>
+
+<li>Where possible, group @include statements at the top of a declaration block, after any @extend statements.</li>
+
+<li>Consider prefixing custom functions with x- or another namespace. This helps to avoid any potential to confuse your function with a native CSS function, or to clash with functions from libraries.</li>
+</ul>
+
+<p>Example:</p>
+
+<pre><code>.selector-1
+    @extend .other-rule
+    @include clearfix()
+    @include box-sizing(border-box)
+    width: x-grid-unit(1)
+    // other declarations</code></pre>
+
+<p>Source: <a href='https://github.com/necolas/idiomatic-css'>Principles of writing consistent, idiomatic CSS by Nicolas Gallagher</a></p>
+
+</section>
+    <footer>
+      <p>System Seed | All Rights Reserved. </p>
+    </footer>
+  </div>
+</body>
+</html>

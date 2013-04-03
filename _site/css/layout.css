@@ -1,0 +1,39 @@
+.main{
+  width: 960px;
+  margin: 10px auto;
+}
+
+.header{
+  background-color: #000;
+  border-top: 3px solid #598DB6;
+  border-bottom: 4px solid #598DB6;
+}
+
+.header-inner{
+  width: 960px;
+  margin: 0 auto;
+}
+
+footer{
+  clear: both;
+  padding: 20px;
+  text-align: right;
+}
+
+.sidebar{
+  float: left;
+  width: 200px;
+  margin-right: 20px;
+  padding-top: 20px;
+}
+
+.content{
+  background-color: #fff;
+  box-shadow: 2px 2px 4px #999;
+  padding: 20px;
+}
+
+.content-2-col{
+  float: right;
+  width: 660px;
+}

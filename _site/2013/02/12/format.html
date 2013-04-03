@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title>  3. Format (Overview) |  CSS Strategy </title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="/css/layout.css" />
+</head>
+<body>
+<div class="header">
+<div class="header-inner">
+  <h1> CSS Strategy </h1>
+    <ul class="nav-main">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/">Blog</a></li>
+    </ul>
+  </header>
+</div>
+</div>
+  <div class="main">
+    <section class="sidebar">
+<h2>Contents</h2>
+<ul class="nav-sub">
+  
+  <li><a href="/2013/02/26/comments.html">1. Comments</a></li>
+  
+  <li><a href="/2013/02/14/indenting-and-whitespace.html">2. Indenting and Whitespace</a></li>
+  
+  <li><a href="/2013/02/12/format.html">3. Format (Overview)</a></li>
+  
+  <li><a href="/format/2013/02/11/general-format.html">General Format</a></li>
+  
+  <li><a href="/format/2013/02/10/properties.html">Properties</a></li>
+  
+  <li><a href="/format/2013/02/09/performance.html">Performance</a></li>
+  
+  <li><a href="/2013/02/08/preprocessor.html">4. Preprocessor</a></li>
+  
+</ul>
+
+</section>
+
+<section class="content content-2-col">
+
+  <h2 class="page-title">3. Format (Overview)</h2>
+  
+  <ul>
+<li>General Format</li>
+
+<li>Selectors</li>
+
+<li>Properties</li>
+
+<li>Exceptions and slight deviations</li>
+
+<li>Performance</li>
+</ul>
+
+<h2 id='quick_overview'>Quick Overview</h2>
+
+<p><strong>General Format:</strong></p>
+
+<ul>
+<li>Minimise the use of element selectors</li>
+
+<li>Do not use location based selectors</li>
+
+<li>Do not use ID&#8217;s in CSS Selectors</li>
+
+<li>Use dashes to separate words</li>
+</ul>
+
+<p><strong>Selectors:</strong></p>
+
+<ul>
+<li>Include a single space before the opening brace of a ruleset.</li>
+
+<li>Multiple selectors should each be on a single line, with no space after each comma.</li>
+
+<li>Selectors should be 4 or less levels deep</li>
+</ul>
+
+<p><strong>Properties:</strong></p>
+
+<ul>
+<li>Include one declaration per line in a declaration block.</li>
+
+<li>For each declaration use one level of indentation, two spaces, not tabs.</li>
+
+<li>Include single space after the colon of a declaration. (This is also good practise when switching to using SASS the space is required.)</li>
+
+<li>Use lowercase and shorthand hex values, e.g., #aaa.</li>
+
+<li>Where allowed, avoid specifying units for zero-values, e.g., margin: 0.</li>
+
+<li>Include a space after each comma in comma-separated property or function values.</li>
+
+<li>End each declaration with a semi-colon.</li>
+
+<li>Place the closing brace of a ruleset in the same column as the first character of the ruleset.</li>
+
+<li>Separate each ruleset by a blank line.</li>
+
+<li>Property order - Group similar properties</li>
+</ul>
+
+<p><strong>Exceptions and slight deviations:</strong></p>
+
+<ul>
+<li>Large blocks of single declarations can use a slightly different, single-line format.</li>
+
+<li>Long, comma-separated property values - such as collections of gradients or shadows - can be arranged across multiple lines in an effort to improve readability and produce more useful diffs.</li>
+</ul>
+
+<p><strong>Performance:</strong></p>
+
+<ul>
+<li>Minimise HTTP requests</li>
+
+<li>Always Minimise CSS</li>
+</ul>
+
+</section>
+    <footer>
+      <p>System Seed | All Rights Reserved. </p>
+    </footer>
+  </div>
+</body>
+</html>

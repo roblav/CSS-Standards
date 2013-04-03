@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title>  General Format |  CSS Strategy </title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="/css/layout.css" />
+</head>
+<body>
+<div class="header">
+<div class="header-inner">
+  <h1> CSS Strategy </h1>
+    <ul class="nav-main">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/">Blog</a></li>
+    </ul>
+  </header>
+</div>
+</div>
+  <div class="main">
+    <section class="sidebar">
+<h2>Contents</h2>
+<ul class="nav-sub">
+  
+  <li><a href="/2013/02/26/comments.html">1. Comments</a></li>
+  
+  <li><a href="/2013/02/14/indenting-and-whitespace.html">2. Indenting and Whitespace</a></li>
+  
+  <li><a href="/2013/02/12/format.html">3. Format (Overview)</a></li>
+  
+  <li><a href="/format/2013/02/11/general-format.html">General Format</a></li>
+  
+  <li><a href="/format/2013/02/10/properties.html">Properties</a></li>
+  
+  <li><a href="/format/2013/02/09/performance.html">Performance</a></li>
+  
+  <li><a href="/2013/02/08/preprocessor.html">4. Preprocessor</a></li>
+  
+</ul>
+
+</section>
+
+<section class="content content-2-col">
+
+  <h2 class="page-title">General Format</h2>
+  
+  <h4 id='minimise_the_use_of_element_selectors'>Minimise the use of element selectors</h4>
+
+<p>Selectors that contain elements tightly coupled the CSS to specific markup. It is not a safe assumption that the semantics of the content will never change so authors should prefer classes which exist independent of markup and create more flexible CSS.</p>
+
+<p>Source: <a href='http://smacss.com/book/type-module'>SMACSS on modules</a></p>
+
+<h4 id='do_not_use_location_based_selectors'>Do not use location based selectors</h4>
+
+<p>A location based selector is a selector that changes a modules appearance based on its location (content area, side bar, header etc). Where a module has different appearances it is better to use a module subclass. If the appearance and/or content is very different it would be better to use a different module</p>
+
+<p>Source: <a href='http://www.slideshare.net/stubbornella/object-oriented-css'>OOCSS, slide 20</a></p>
+
+<h4 id='do_not_use_ids_in_css_selectors'>Do not use ID&#8217;s in CSS Selectors</h4>
+
+<p>It is never safe to assume there will only ever be one of something on a page so do not use ID&#8217;s for CSS. Id&#8217;s are much better used as javascript hooks so use them for this instead.</p>
+
+<p>Source: <a href='http://smacss.com/book/type-layout'>SMACSS on layout</a></p>
+
+<h4 id='use_dashes_to_separate_words'>Use dashes to separate words</h4>
+
+<p>CSS properties do not use underscores or camel case, they use dashes. Do the same with classes</p>
+
+<h3 id='selectors'>Selectors</h3>
+
+<h4 id='include_a_single_space_before_the_opening_brace_of_a_ruleset'>Include a single space before the opening brace of a ruleset.</h4>
+
+<p>Example code:</p>
+
+<pre><code>.book-navigation .page-next {
+}
+
+.book-navigation .page-previous {
+}</code></pre>
+
+<p>A blank line should be placed between each group, section, or block of multiple selectors of logically related styles.</p>
+
+<h4 id='multiple_selectors_should_each_be_on_a_single_line_with_no_space_after_each_comma'>Multiple selectors should each be on a single line, with no space after each comma.</h4>
+
+<pre><code>#forum td.posts,
+#forum td.topics,
+#forum td.replies,
+#forum td.pager {</code></pre>
+
+<h4 id='selectors_should_be_4_or_less_levels_deep'>Selectors should be 4 or less levels deep</h4>
+
+<p>Long complex selector chains spawn specificity wars and are slower for the browser to evaluate. Its unlikely you <em>need</em> to use a selector more than 4 levels deep. If it is, consider adding additional classes to the markup to enable a shorter selector length.</p>
+
+<p>Long selector chains also have an impact on the page load, however it is minor. In other words, consider selector performance but don’t waste too much time on it.</p>
+
+<p>Source: <a href='http://smacss.com/book/applicability'>SMACCS - Depth of Applicability</a></p>
+
+<p>Source: <a href='http://smacss.com/book/selectors'>SMACCS - Selector Performance</a></p>
+
+</section>
+    <footer>
+      <p>System Seed | All Rights Reserved. </p>
+    </footer>
+  </div>
+</body>
+</html>
