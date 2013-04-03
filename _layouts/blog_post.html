@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<section class="sidebar">
+<h2>Contents</h2>
+<ul class="nav-sub">
+  {% for post in site.posts %}
+  <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
+
+</section>
+
+<section class="content content-2-col">
+
+  <h2 class="page-title">{{page.title}}</h2>
+  
+  {{ content }}
+
+</section>

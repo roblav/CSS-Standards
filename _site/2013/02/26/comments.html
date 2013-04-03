@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title>  1. Comments |  CSS Strategy </title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="/css/layout.css" />
+</head>
+<body>
+<div class="header">
+<div class="header-inner">
+  <h1> CSS Strategy </h1>
+    <ul class="nav-main">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/">Blog</a></li>
+    </ul>
+  </header>
+</div>
+</div>
+  <div class="main">
+    <section class="sidebar">
+<h2>Contents</h2>
+<ul class="nav-sub">
+  
+  <li><a href="/2013/02/26/comments.html">1. Comments</a></li>
+  
+  <li><a href="/2013/02/14/indenting-and-whitespace.html">2. Indenting and Whitespace</a></li>
+  
+  <li><a href="/2013/02/12/format.html">3. Format (Overview)</a></li>
+  
+  <li><a href="/format/2013/02/11/general-format.html">General Format</a></li>
+  
+  <li><a href="/format/2013/02/10/properties.html">Properties</a></li>
+  
+  <li><a href="/format/2013/02/09/performance.html">Performance</a></li>
+  
+  <li><a href="/2013/02/08/preprocessor.html">4. Preprocessor</a></li>
+  
+</ul>
+
+</section>
+
+<section class="content content-2-col">
+
+  <h2 class="page-title">1. Comments</h2>
+  
+  <p>Well commented code is extremely important. Take time to describe components, how they work, their limitations, and the way they are constructed. Don&#8217;t leave others in the team guessing as to the purpose of uncommon or non-obvious code.</p>
+
+<p>Comment style should be simple and consistent within a single code base.</p>
+
+<ul>
+<li>Keep line-length to a sensible maximum, e.g., 80 columns.</li>
+
+<li>Make liberal use of comments to break CSS code into discrete sections.</li>
+
+<li>Use &#8220;sentence case&#8221; comments and consistent text indentation.</li>
+</ul>
+
+<p>Tip: configure your editor to provide you with shortcuts to output agreed-upon comment patterns.</p>
+
+<pre><code>/** 
+ * =================================
+ * Section Comment
+ * =================================
+ * 
+ * Comment here
+ * 
+ */
+   
+/**
+ * Sub-Section Comment
+ * =================================
+ * 
+ * Comment here
+ * 
+ */
+      
+
+/** 
+ * Short description
+ */
+
+/* Basic */</code></pre>
+
+<p>Source: <a href='https://github.com/necolas/idiomatic-css'>Principles of writing consistent, idiomatic CSS by Nicolas Gallagher</a></p>
+
+<p>Source: <a href='http://drupal.org/node/1354'>Doxygen and comment formatting conventions</a></p>
+
+<h3 id='table_of_contents'>Table of contents</h3>
+
+<p>In a development team it&#8217;s a good idea to add a a table of contents at the top of the main css file. This will act as a reference for the team of how the file is structured.</p>
+
+<p>Include colour references, to ensure consistency in colour selection. If using a preprocessor like SASS, then use colour variables.</p>
+
+<p>Example:</p>
+
+<pre><code>/** 
+ * =================================
+ * Name of Theme - Style Sheet
+ * =================================
+ * 
+ * version:   1.0
+ * author:    rob lavender
+ * email:     rob@systemseed.com
+ * 
+ * Colour Ref details:
+ * 
+ * #008A84 - Teal
+ * #005a31 - dark green
+ * #00734a - green
+ * 
+ * @todo - Need to be dealt with before live deployment
+ * 
+ *  Structure
+ *  =================================
+ * 
+ * - Sitewide
+ *   - Omega resets
+ *     - Pager
+ *     - Tables
+ *   - Accessibility - Page style
+ *   - Header
+ *   - Footer
+ *   - Typography
+ *   - Menu main
+ * 
+ *
+ */</code></pre>
+
+</section>
+    <footer>
+      <p>System Seed | All Rights Reserved. </p>
+    </footer>
+  </div>
+</body>
+</html>
